@@ -45,6 +45,7 @@ git diff
 
 ### 版本回退
 
+> 使用`git reset --hard HEAD^`回退到上一个提交版本
 
 
 
