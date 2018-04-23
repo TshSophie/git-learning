@@ -31,9 +31,9 @@ $ git commit readme.txt -m "项目说明文档"
 
 **-m 后面的为提交说明**
 
-***注意使用git commit提交前要先git add一下，即提交需要有两个步骤
-1.git add
-2.git commit
+***注意使用git commit提交前要先git add一下，把文件往Git版本库里添加的时候，是分两步执行的：
+第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；
+第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。
 ***
 
 > 使用`git status`查看结果
