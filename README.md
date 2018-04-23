@@ -31,6 +31,11 @@ $ git commit readme.txt -m "项目说明文档"
 
 **-m 后面的为提交说明**
 
+***注意使用git commit提交前要先git add一下，即提交需要有两个步骤
+1.git add
+2.git commit
+***
+
 > 使用`git status`查看结果
 
 ~~~
@@ -45,7 +50,31 @@ git diff
 
 ### 版本回退
 
+> 使用`git log`查看提交日志
+
+~~~
+$ git log
+~~~
+
+上面会列出提交的ID、提交人、邮箱以及提交日期
+
+***加--pretty=oneline参数简化查看提交的日志
+这时只会把提交ID和提交的说明列出来
+***
+
 > 使用`git reset --hard HEAD^`回退到上一个提交版本
+
+首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交3628164...882e1e0（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。
+
+> 使用`git reset --hard 提交ID`回到这个提交ID所对应的版本
+
+>使用`git reflog`查看每一次命令以及对应版本号
+
+~~~
+$ git reflog
+~~~
+
+
 
 
 
